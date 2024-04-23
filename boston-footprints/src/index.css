@@ -1,0 +1,21 @@
+/* Page level defaults */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-page-bg: #DFE1E0;
+  --color-header-bg: #EBC678;
+  --color-text: #544F53;
+  --color-bright: #B4C6D0;
+  --color-hover: #0174BE;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-page-bg);
+
+  font-family: sans-serif;
+}

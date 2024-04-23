@@ -1,0 +1,9 @@
+.hamburger {
+    background: linear-gradient(to bottom,
+            black, black 20%,
+            var(--color-header-bg) 20%, var(--color-header-bg) 40%,
+            black 40%, black 60%,
+            var(--color-header-bg) 60%, var(--color-header-bg) 80%,
+            black 80%, black 100%);
+
+}

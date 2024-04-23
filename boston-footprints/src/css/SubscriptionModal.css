@@ -1,0 +1,152 @@
+.modal {
+    border: 2px solid #444;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-page-bg);
+    z-index: 1000;
+}
+
+input {
+    font: inherit;
+}
+
+.required__message {
+    margin-bottom: 1rem;
+}
+
+.is__required {
+    color: red;
+    font-size: small;
+}
+
+.register {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem;
+    border: 1px solid #12372A;
+    border-radius: 15px;
+}
+
+.register__label,
+.register__name-input,
+.register__email-input,
+.register__confirm-input,
+.register__error {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.register__label {
+    margin-bottom: 8px;
+}
+
+.register__name-input,
+.register__email-input,
+.register__confirm-input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.register__error {
+    color: red;
+    margin-bottom: 1rem;
+}
+
+.checkbox {
+    margin-bottom: 1rem;
+}
+
+.register__submit {
+    margin: 0 auto;
+
+    height: 2.5rem;
+    width: 5rem;
+
+    font-family: "Monaco", sans-serif;
+}
+
+.register__label,
+.register__submit {
+    cursor: pointer;
+}
+
+.modal__btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__btn {
+    padding: 0.4rem;
+
+    background-color: var(--color-bright);
+    color: var(--color-text);
+
+    cursor: pointer;
+
+    width: 10rem;
+    margin: 1rem;
+}
+
+.modal__btn:hover {
+    background-color: var(--color-hover);
+    color: white;
+}
+
+.success__msg {
+    color: green;
+}
+
+@media (min-width: 40rem) {
+    .register {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .register__label,
+    .register__input {
+        grid-column: span 1;
+    }
+
+    .register__label {
+        text-align: left;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        margin-bottom: 1rem;
+    }
+
+    .required__message,
+    .register__submit {
+        grid-column: 1 / -1;
+    }
+
+    .register__error {
+        grid-column: 2 / span 1;
+        color: red;
+    }
+
+    .register__submit {
+        justify-self: center;
+        width: auto;
+        margin: 1rem 0;
+    }
+
+    .modal__btns {
+        flex-direction: row;
+    }
+}

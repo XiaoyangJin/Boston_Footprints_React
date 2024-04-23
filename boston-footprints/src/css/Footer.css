@@ -1,0 +1,43 @@
+.footer {
+    background-color: var(--color-header-bg);
+}
+
+.footer__menu__list {
+    padding: 1rem;
+}
+
+.footer__menu__item {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    font-size: 1.3rem;
+
+    text-decoration: underline;
+}
+
+.footer__menu__item a {
+    font-size: smaller;
+    text-decoration: none;
+
+    padding: 1rem;
+}
+
+.footer__menu__item a:hover {
+    background-color: #0174BE;
+    color: #FFF0CE;
+
+    text-decoration: underline;
+}
+
+@media (min-width: 40rem) {
+    .footer__menu__list {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+    }
+
+    .footer__menu__item {
+        grid-column: span 2;
+    }
+}
