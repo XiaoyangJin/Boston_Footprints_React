@@ -7,6 +7,7 @@ import Play from './components/Play';
 import Food from './components/Food';
 import Home from './components/Home';
 import SubscriptionModal from './components/SubscriptionModal';
+import CreatePost from './components/CreatePost';
 
 function App() {
 
@@ -38,6 +39,9 @@ function App() {
       break;
     case '#/food':
       PageComponent = Food;
+      break;
+    case '#/create':
+      PageComponent = CreatePost;
       break;
     default:
       PageComponent = Home; // Default case
