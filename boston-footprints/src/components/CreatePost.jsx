@@ -19,12 +19,18 @@ function CreatePost() {
 
     const createPost = async (e) => {
         e.preventDefault();
-        await supabase
+        console.log("Submitting form", text);
+        const { data, error } = await supabase
             .from('Posts')
-            .insert({ title: text.title, summary: text.summary })
-            .select();
-        window.location = "/";
-    }
+            .insert([{ title: text.title, summary: text.summary }]);
+
+        if (error) {
+            console.error('Error inserting data:', error);
+        } else {
+            console.log('Inserted data:', data);
+            window.location = "/";
+        }
+    };
 
     return (
         <div className='create__content'>
@@ -34,7 +40,7 @@ function CreatePost() {
                 <input className='create__form-input' type='text' id='title' name='title' onChange={handleChange} /><br />
 
                 <label className='create__form-lable' htmlFor='summary'>Summary: </label><br />
-                <textarea rows="5" cols="50" id="summary" onChange={handleChange}>
+                <textarea rows="5" cols="30" id="summary" name='summary' onChange={handleChange}>
                 </textarea><br />
 
                 <input className='create__form-button' type="submit" value="Submit" onClick={createPost} />
