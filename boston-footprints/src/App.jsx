@@ -8,11 +8,15 @@ import Food from './components/Food';
 import Home from './components/Home';
 import SubscriptionModal from './components/SubscriptionModal';
 import CreatePost from './components/CreatePost';
+import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 
 function App() {
 
   const [page, setPage] = useState('');
   const [showModal, setShowModal] = useState(false);
+
+  const user = useUser();
+  const supabase = useSupabaseClient();
 
   useEffect(() => {
     function handlePageLoad() {
@@ -49,10 +53,18 @@ function App() {
 
   return (
     <div className='app'>
-      <Header setPage={setPage} setShowModal={setShowModal} />
-      <SubscriptionModal showModal={showModal} setShowModal={setShowModal} />
-      <PageComponent />
-      <Footer />
+      {user === null ?
+        <>
+          <h1>Welcome to Travel Footprints</h1>
+        </>
+        :
+        <>
+          <Header setPage={setPage} setShowModal={setShowModal} />
+          <SubscriptionModal showModal={showModal} setShowModal={setShowModal} />
+          <PageComponent />
+          <Footer />
+        </>}
+
     </div>
   )
 }
