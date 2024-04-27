@@ -1,2 +1,4 @@
 https://unsplash.com/@ventiviews?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
-  
+
+## Image Copyright Notice
+All images not explicitly credited in this project are the property of Xiaoyang Jin and were taken by her. Unauthorized use of these images without permission is prohibited.
