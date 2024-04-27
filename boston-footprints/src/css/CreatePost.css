@@ -1,0 +1,47 @@
+.create__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.create__form {
+    display: grid;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.create__form-input {
+    margin-bottom: 1rem;
+}
+
+.create__form-button {
+    margin: 1rem auto;
+
+    height: 2.5rem;
+    width: 5rem;
+}
+
+.create__form-button:hover {
+    background-color: var(--color-hover);
+}
+
+.create__form-lable,
+.create__form-button {
+    cursor: pointer;
+}
+
+textarea {
+    font-family: inherit;
+}
