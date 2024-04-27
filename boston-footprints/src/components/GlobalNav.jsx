@@ -33,7 +33,7 @@ function GlobalNav({ className, setPage, setShowModal }) {
                 <Button href="#/" onClick={changePage} visual="link" name="Home" />
                 <Button href="#/play" onClick={changePage} visual="link" name="Play" />
                 <Button href="#/food" onClick={changePage} visual="link" name="Food" />
-                {/* <Button href="#/create" onClick={changePage} visual="link" name="Create Post" /> */}
+                <Button href="#/create" onClick={changePage} visual="link" name="Create Post" />
                 <button className="subscribe__btn" onClick={() => { console.log('Opening modal'); setShowModal(true); }}>Subscribe</button>
             </div>
         </nav>
