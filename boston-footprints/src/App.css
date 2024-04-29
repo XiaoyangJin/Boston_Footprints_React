@@ -1,0 +1,22 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-header-bg);
+    color: var(--color-text);
+
+    height: 100vh;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__label {
+    margin-bottom: 0.7rem;
+}

@@ -9,6 +9,7 @@ import Home from './components/Home';
 import SubscriptionModal from './components/SubscriptionModal';
 import CreatePost from './components/CreatePost';
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
+import { Button, Form } from 'react-bootstrap';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
 
   const user = useUser();
   const supabase = useSupabaseClient();
+  const [email, setEmail] = useState('');
 
   useEffect(() => {
     function handlePageLoad() {
@@ -56,6 +58,17 @@ function App() {
       {user === null ?
         <>
           <h1>Welcome to Travel Footprints</h1>
+          <Form>
+            <Form.Group className='login__form'>
+              <Form.Label className='login__label'>Please enter an email to sign in</Form.Label>
+              <Form.Control type='email'
+                placeholder='Enter email'
+                onChange={(e) => setEmail(e.target.value)} />
+            </Form.Group>
+            <Button className='login__button' variant='primary'>
+              Get valid link
+            </Button>
+          </Form>
         </>
         :
         <>
