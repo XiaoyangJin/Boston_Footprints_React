@@ -69,6 +69,7 @@ function App() {
               Get valid link
             </Button>
           </Form>
+          <a href='https://github.com/XiaoyangJin/Boston_Footprints_React.git'>Feel free to check a demo of this website!</a>
         </>
         :
         <>
