@@ -58,9 +58,9 @@ function App() {
       {user === null ?
         <>
           <h1>Welcome to Travel Footprints</h1>
-          <Form>
-            <Form.Group className='login__form'>
-              <Form.Label className='login__label'>Please enter an email to sign in</Form.Label>
+          <Form className='login__form'>
+            <Form.Group className='login__form-email'>
+              <Form.Label className='login__label'>Please enter an email to sign in: </Form.Label>
               <Form.Control type='email'
                 placeholder='Enter email'
                 onChange={(e) => setEmail(e.target.value)} />
