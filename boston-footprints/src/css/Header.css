@@ -4,7 +4,6 @@
         "header-logo header-title"
         "header-nav header-nav"
     ;
-    grid-template-columns: 45% 55%;
 
     background-color: var(--color-header-bg);
 }
