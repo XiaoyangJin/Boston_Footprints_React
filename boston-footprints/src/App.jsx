@@ -19,6 +19,7 @@ function App() {
   const user = useUser();
   const supabase = useSupabaseClient();
   const [email, setEmail] = useState('');
+  console.log(email);
 
   useEffect(() => {
     function handlePageLoad() {
