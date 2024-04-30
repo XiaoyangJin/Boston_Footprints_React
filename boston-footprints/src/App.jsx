@@ -21,6 +21,19 @@ function App() {
   const [email, setEmail] = useState('');
   console.log(email);
 
+  async function magicLinkLogin() {
+    const { data, error } = await supabase.auth.signInWithOtp({
+      email: email
+    });
+
+    if (error) {
+      alert("Error communicating with supabase, make sure to use a real email address!");
+      console.log(error);
+    } else {
+      alert("Check your email for a supabase Magic Link to log in!");
+    }
+  }
+
   useEffect(() => {
     function handlePageLoad() {
       const newPage = document.location.hash || '#/';
@@ -66,7 +79,7 @@ function App() {
                 placeholder='Enter email'
                 onChange={(e) => setEmail(e.target.value)} />
             </Form.Group>
-            <Button className='login__button' variant='primary'>
+            <Button className='login__button' variant='primary' onClick={() => magicLinkLogin()}>
               Get valid link
             </Button>
           </Form>
