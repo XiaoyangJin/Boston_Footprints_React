@@ -7,7 +7,6 @@
     background-color: var(--color-header-bg);
     color: var(--color-text);
 
-    height: 100vh;
 }
 
 .login__form {
