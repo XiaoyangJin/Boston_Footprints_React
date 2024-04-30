@@ -40,3 +40,10 @@
     color: white;
     background-color: var(--color-hover);
 }
+
+
+@media (min-width: 40rem) {
+    .login__form-email {
+        font-size: 1.3rem;
+    }
+}
