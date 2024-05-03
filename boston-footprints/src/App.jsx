@@ -87,7 +87,9 @@ function App() {
         </>
         :
         <>
+          <Button className='signout__btn' onClick={() => signOut()}>Sign Out</Button>
           <Header setPage={setPage} setShowModal={setShowModal} />
+
           <SubscriptionModal showModal={showModal} setShowModal={setShowModal} />
           <PageComponent />
           <Footer />
