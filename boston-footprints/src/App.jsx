@@ -87,7 +87,11 @@ function App() {
         </>
         :
         <>
-          <Button className='signout__btn' onClick={() => signOut()}>Sign Out</Button>
+          <div className='header__info'>
+            <p>Current user: {user.email}</p>
+            <Button className='signout__btn' onClick={() => signOut()}>Sign Out</Button>
+          </div>
+
           <Header setPage={setPage} setShowModal={setShowModal} />
 
           <SubscriptionModal showModal={showModal} setShowModal={setShowModal} />
