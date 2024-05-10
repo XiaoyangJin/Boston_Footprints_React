@@ -96,7 +96,7 @@ function CreatePost() {
             const imageUrl = publicURL;
             const { data, error } = await supabase
                 .from('Posts')
-                .insert([{ title: text.title, summary: text.summary, imageUrl: imageUrl }]);
+                .insert([{ title: text.title, summary: text.summary, imageUrl: imageUrl, user_id: user.id }]);
 
             if (error) {
                 console.error('Error inserting post data:', error);
