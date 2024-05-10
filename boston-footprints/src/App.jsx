@@ -34,6 +34,10 @@ function App() {
     }
   }
 
+  async function signOut() {
+    const { error } = await supabase.auth.signOut();
+  }
+
   useEffect(() => {
     function handlePageLoad() {
       const newPage = document.location.hash || '#/';
@@ -88,7 +92,8 @@ function App() {
         :
         <>
           <div className='header__info'>
-            <p>Current user: {user.email}</p>
+            <p>Current user:</p>
+            <p>{user.email}</p>
             <Button className='signout__btn' onClick={() => signOut()}>Sign Out</Button>
           </div>
 

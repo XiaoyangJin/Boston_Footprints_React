@@ -10,12 +10,10 @@
 }
 
 .header__info {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-
-    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .login__form {
@@ -53,5 +51,14 @@
 @media (min-width: 40rem) {
     .login__form-email {
         font-size: 1.3rem;
+    }
+
+    .header__info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+
+        margin: 0.5rem;
     }
 }
